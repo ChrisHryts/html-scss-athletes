@@ -41,30 +41,34 @@ body {
 
   &__logo {
     position: relative;
-  }
 
-  &__logo-image {
-    width: $card-side;
-    height: $card-side;
-    object-fit: cover;
-    object-position: center left;
-    border-radius: 200px;
-    margin-bottom: 4px;
-  }
+    &-image {
+      width: $card-side;
+      height: $card-side;
+      object-fit: cover;
+      object-position: center left;
+      border-radius: 200px;
+      margin-bottom: 4px;
+  
+      &:hover {
+        border-radius: 60px;
+      }
+    }
 
-  &__logo-number {
-    position: absolute;
-    top: ($card-side / 2) - ($number-side / 2);
-    left: $card-side - $number-side - 10px;
-    width: $number-side;
-    height: $number-side;
-    background-color: white;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 16px;
-    line-height: $number-side;
-    letter-spacing: 0em;
-    color: $number-color;
+    &-number {
+      position: absolute;
+      top: ($card-side / 2) - ($number-side / 2);
+      left: $card-side - $number-side - 10px;
+      width: $number-side;
+      height: $number-side;
+      background-color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 16px;
+      line-height: $number-side;
+      letter-spacing: 0em;
+      color: $number-color;
+    }
   }
 
   &__details {
@@ -79,23 +83,22 @@ body {
     font-size: 20px;
     font-weight: 600;
     
-    &:hover {
-      font-size: 24px;
-      line-height: 28px;
-    }
-  }
 
-  &__details-extra {
-    opacity: 0;
-
-    &__hover {
-      opacity: 1;
-    }
   }
 
   &:hover {
     background-color:#EEEEEE;
     border-radius: 10px;
     transform: scale(1.2);
+    transition: border-radius 1s, transform 1s;
+
+    .card__details-name {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .card__logo-image {
+      border-radius: 60px;
+    }
   }
 }
