@@ -62,9 +62,6 @@ body {
     border-radius: 10px;
     transform: scale(1.2);
     transition: border-radius 1s, transform 1s; }
-    .card:hover .card__details-name {
-      font-size: 24px;
-      line-height: 28px; }
     .card:hover .card__logo-image {
       border-radius: 60px; }
 
