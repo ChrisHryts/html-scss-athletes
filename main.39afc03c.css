@@ -26,26 +26,28 @@ body {
   width: 200px; }
   .card__logo {
     position: relative; }
-  .card__logo-image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    object-position: center left;
-    border-radius: 200px;
-    margin-bottom: 4px; }
-  .card__logo-number {
-    position: absolute;
-    top: 84px;
-    left: 158px;
-    width: 32px;
-    height: 32px;
-    background-color: white;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 16px;
-    line-height: 32px;
-    letter-spacing: 0em;
-    color: #8B0000; }
+    .card__logo-image {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      object-position: center left;
+      border-radius: 200px;
+      margin-bottom: 4px; }
+      .card__logo-image:hover {
+        border-radius: 60px; }
+    .card__logo-number {
+      position: absolute;
+      top: 84px;
+      left: 158px;
+      width: 32px;
+      height: 32px;
+      background-color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 16px;
+      line-height: 32px;
+      letter-spacing: 0em;
+      color: #8B0000; }
   .card__details {
     text-align: center; }
   .card__details-name {
@@ -55,17 +57,16 @@ body {
     color: #2F4F4F;
     font-size: 20px;
     font-weight: 600; }
-    .card__details-name:hover {
-      font-size: 24px;
-      line-height: 28px; }
-  .card__details-extra {
-    opacity: 0; }
-    .card__details-extra__hover {
-      opacity: 1; }
   .card:hover {
     background-color: #EEEEEE;
     border-radius: 10px;
-    transform: scale(1.2); }
+    transform: scale(1.2);
+    transition: border-radius 1s, transform 1s; }
+    .card:hover .card__details-name {
+      font-size: 24px;
+      line-height: 28px; }
+    .card:hover .card__logo-image {
+      border-radius: 60px; }
 
 
 /*# sourceMappingURL=/main.39afc03c.css.map */
